@@ -26,11 +26,11 @@ print('It\'s a sunny day.')
 print("File path: C:\\Users\\Aisha\\Documents")
 
 
-print('\t     *')
-print('\t     **')
-print('\t    ****')
-print('\t   ******')
-print('\t  ********')
+print('\t      *')
+print('\t     ***')
+print('\t    *****')
+print('\t   *******')
+print('\t  *********')
 print('\t ***********')
 
 #carriage return

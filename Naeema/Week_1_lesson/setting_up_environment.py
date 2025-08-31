@@ -1,5 +1,5 @@
 #Basic usage of print()
-print("hellop, world!")
+print("hello, world!")
 print("welcome to python programming")
 
 
