@@ -1,14 +1,37 @@
-# main.py
+# my_module/main.py
 
-# Import the whole package
-from math_utils import *
-from string_utils import *
+import first
+import second
 
-print(add(5, 3))           # 8
-print(subtract(10, 4))     # 6
-print(capitalize_text("python"))  # Python
+# lets use the functions in the first.py file
 
-# OR import specific modules
-from string_utils import reverse_text
+print("")
+print("=== Math Functions ===")
+print("5 + 3 =", first.add(5, 3))
+print("10 - 4 =", first.subtract(10, 4))
+print("6 * 7 =", first.multiply(6, 7))
+print("20 / 5 =", first.divide(20, 5))
 
-print(reverse_text("hello"))  # olleh
+# Lets us the functions in the secon
+print("")
+my_rhyme = """
+Black, black, black,
+The color of the night.
+Stars come out,
+And the moon shines bright. 
+
+Black, black, black,
+The color of a shoe. 
+Paint it nice,
+It looks brand new!
+
+Black, black, black,
+The color of a cat. 
+Soft and quick,
+What do you think of that?
+"""
+
+print("My name is Micheal Scoffield. My my code message is: ", second.reverse_string(my_rhyme))
+print("The total number of characters in my message is: ", second.count_characters(my_rhyme))
+print("The total number of words in my message is: ", second.count_words(my_rhyme))
+print("The total number of sentences in my message is: ", second.count_sentences(my_rhyme))
