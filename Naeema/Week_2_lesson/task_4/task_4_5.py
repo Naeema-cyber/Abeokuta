@@ -1,7 +1,7 @@
 #Task 5: Student score Tracker
 new_user = []
 new_score = []
-user = input("Write 3 student names:")
+user = input("Write 3 student names:").title()
 score = input("Write the scores of the students:")
 new_user.append(user)
 new_score.append(score)
