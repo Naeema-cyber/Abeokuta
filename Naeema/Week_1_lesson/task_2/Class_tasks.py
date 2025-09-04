@@ -26,7 +26,7 @@ print("S.S.S 1\tMonday\tPhysics\t\t9:45am\t10:30am")
 print("S.S.S 1\tMonday\tChemistry\t10:30am\t11:15am")
 print("Short\t-\tBreak\t\t11:45am\t12:00pm")
 print("S.S.S1\tMonday\tBiology\t\t12:00pm\t12" \
-";45pm")
+":45pm")
 print("Long\t-\tBreak\t\t12:45pm\t1:15pm")
 print("S.S.S1\tMonday\tEconomics\t1:15pm\t2:00pm")
 

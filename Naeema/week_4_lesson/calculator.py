@@ -17,11 +17,11 @@ def divide(a, b):
     if b != 0:
         return a / b
     else:
-        return "Error: Division by zero"
+        return "Error: Cnnot divide by zero"
     
 # Function for square root
 def sqrt(a):
-    if a != 0 or a<=0:
+    if a != 0 :
         return a** 0.5
     else: return "Error: Number must not be zero"
     
@@ -52,30 +52,28 @@ print("8. Exit")
 def main():
     try:
         while True:
-            choice = int(input("Enter choice (1/2/3/4/5/6/7): "))
+            choice = int(input("Enter choice (1/2/3/4/5/6/7/8): "))
             if choice == 8:
                 print("Exit")
                 break
             elif choice == 5:
                 num = int(input("Enter a number: "))
-                print("The result of the square root of {num} is ", sqrt(num))
+                print("Result: ", sqrt(num))
             else:
                 num1 = float(input("Enter first number: "))
                 num2 = float(input("Enter second number: "))
                 if choice == 1:
-                    print("Result:", add(num1, num2))
+                    print("Result: ", add(num1, num2))
                 elif choice == 2:
-                    print("Result:", subtract(num1, num2))
+                    print("Result: ", subtract(num1, num2))
                 elif choice == 3:
-                    print("Result:", multiply(num1, num2))
+                    print("Result: ", multiply(num1, num2))
                 elif choice == 4:
-                    print("Result:", divide(num1, num2))
-                elif choice == 5:
-                    print("Result:", sqrt(num1))
+                    print("Result: ", divide(num1, num2))
                 elif choice == 6:
-                    print("Result:", exp(num1, num2))
+                    print("Result: ", exp(num1, num2))
                 elif choice == 7:
-                    print("Result:", modulus(num1, num2) )
+                    print("Result: ", modulus(num1, num2) )
                 else: 
                     print("Invalid choice")
                 
