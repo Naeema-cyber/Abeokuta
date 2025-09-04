@@ -216,4 +216,101 @@ print(adunni_account.withdraw(10000))
 print(adunni_account.transfer(15000, "Sunday James"))
 print(adunni_account.check_balance())
 
+# Attributes vs Methods
+
+class NaijaPhone:
+    def __init__(self,brand,model,network_provider):
+        self.brand = brand
+        self.model = model
+        self.network_provider = network_provider
+        self.airtime_balance = 0
+        self.data_balance =0
+        self.is_on = False
+
+
+    def power_on(self):
+        self.is_on = True
+        return f"{self.brand} phone is now on. Network: {self.network_provider}"
+    
+    def buy_airtime(self, amount):
+        self.airtime_balance += amount
+        return f"{amount} airtime purchased. Balance: ₦{self.airtime_balance}"
+    
+    def make_call(self, number):
+        if self.is_on and self.airtime_balance > 0:
+            self.airtime_balance -= 10
+            return f"Calling {number}... Remaining airtime: ₦{self.airtime_balance}"
+        return "Cannot make call. Check phone and airtimr balance"
+    
+    def send_sms(self, message, number):
+        if self.airtime_balance >= 4:
+            self.airtime_balance -= 4
+            return f"SMS sent to {number}: '{message}. Remaining airtime: ₦{self.airtime_balance}"
+        return "Insufficient airtime to send SMS"
+    
+
+class BRTBus:
+    def __init__(self, route, bus_number):
+
+        self.route = route
+        self.bus_number = bus_number
+        self.current_stop = "Ikorodu"
+        self.passenger_count = 0
+        self.fare = 300
+
+    def announce_stop(self):
+        return f"Next stop: {self.current_stop}. Fare is ₦{self.fare}"
+    
+    def board_passengers(self, count):
+        self.passenger_count += count
+        return f"{count} passengers boarded. Total: {self.passenger_count}"
+    
+
+
+class MarketTrader:
+    def __init__(self, name, market_name, goods):
+
+        self.name = name
+        self.market_name = market_name
+        self.goods = goods
+        self.daily_sales = 0
+
+
+    def advertise_goods(self):
+        return f"{self.name} at {self.market_name}: Fresh  {', '.join(self.goods)} available!"
+    
+    def make_sale(self, amount):
+        self.daily_sales += amount
+        return f"Sale made! Today's total: ₦{self.daily_sales:,}"
+    
+
+class NigerianBankAccount:
+    def __init__(self, owner, initial_balance):
+        self.owner = owner
+        self._balance = initial_balance
+        self._pin = "1234"
+        self._transaction_history = []
+
+
+    # Public methods - anyone can use these
+    def deposit(self, amount):
+        if amount > 0:
+            self._balance += amount
+            self._transaction_history.append(f"Depoisited ₦{amount:,}")
+            return f"₦{amount:,} deposited successfully"
+        return "Invalid deposit amount"
+    
+
+    def withdraw(self, amount, pin):
+        if self.__verify_pin(pin):
+            if amount <= self._balance:
+                self._balance -= amount
+                self._transaction_history.append(f"Withdrew ₦{amount:,}")
+                return f"₦{amount:,} withdrawn successfully"
+            return "Insufficient funds"
+        return "Invalid PIN"
+    
+
+    def check_balance(self, pin):
+        if self
     
