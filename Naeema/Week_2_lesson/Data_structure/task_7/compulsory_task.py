@@ -7,9 +7,8 @@ scores = input("Enter your scores for the equivalent subjects separated by comma
 guardian_name = input("Enter your guardian's name: ").title()
 guardian_phone = input("Enter your guardian's phone number: ")
 hobbies = set(input("Enter your hobby(ies) if you have more than one separated by comma: ").title().split(","))
-scores2 = [float(score) for score in scores]
-print(scores2)
-set_of_scores = tuple(scores2)
+print(scores)
+set_of_scores = tuple(scores)
 print(set_of_scores)
 
 average_score = sum(set_of_scores) / len(set_of_scores)

@@ -10,9 +10,10 @@ elif user.istitle():
 else:
     print("The input contains both uppercase and lowercase.")
 
-reversed_str = ""
-for char in user:
-    reversed_str = char + reversed_str
-print(reversed_str)
+# reversed_str = ""
+# for char in user:
+#     reversed_str = char + reversed_str
+# print(reversed_str)
 
+print(user[::-1])
     

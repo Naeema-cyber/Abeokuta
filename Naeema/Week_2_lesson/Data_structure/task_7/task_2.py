@@ -7,10 +7,11 @@ prices["Orange"] = input(f"price of {items[2]}: ")
 prices["Pineapple"] = input(f"price of {items[3]}: ")
 prices["Kiwi"] = input(f"price of {items[4]}: ")
 
+
 print("Price List of Items in the Store: ")
 
 for items, price in prices.items():
-    print(f"{items}: N{prices}")
+    print(f"{items}: ₦{prices}")
     
 items_update = input("Item to update: ")
 if items_update in prices:

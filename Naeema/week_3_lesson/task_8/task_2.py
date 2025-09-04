@@ -1,3 +1,6 @@
+"""This code explains the key processes involved in obtaining a federal government scholarship. If all conditins are met then the applicant will bw qualified for the scholarship but if not the applicant will be disqualified_summary_
+    """
+
 name = input("Enter your name: ").upper()
 age = int(input("Enter your age: "))
 enrollment = input("Are you an undergraduate: ").upper()
